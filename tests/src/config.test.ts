@@ -1,6 +1,6 @@
 import { vi, describe, it, expect } from "vitest";
-import type { EmailProvider } from "../../core/types.js";
-import { getEmailConfig } from "../../vercel/config.js";
+import type { EmailProvider } from "@contact-api/core/types";
+import { getEmailConfig } from "../../src/config.js";
 
 const mockProvider: EmailProvider = {
   id: "mock",

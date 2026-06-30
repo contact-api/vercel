@@ -1,7 +1,7 @@
-import type { EmailProvider       } from "../core/types.js";
-import type { EmailConfig } from "../core/email.js";
-import { createNodemailerProvider } from "../nodemailer/index.js";
-import { createResendProvider     } from "../resend/index.js";
+import type { EmailProvider       } from "@contact-api/core/types";
+import type { EmailConfig         } from "@contact-api/core/email";
+import { createNodemailerProvider } from "@contact-api/nodemailer";
+import { createResendProvider     } from "@contact-api/resend";
 
 export interface Config {
   provider: EmailProvider | null;
