@@ -9,8 +9,16 @@
     "url": "git+https://github.com/contact-api/vercel.git"
   },
   "homepage": "https://github.com/contact-api/vercel#readme",
-  "bugs": { "url": "https://github.com/contact-api/vercel/issues" },
-  "keywords": ["vercel", "contact-form", "typescript", "contact-api", "serverless"],
+  "bugs": {
+    "url": "https://github.com/contact-api/vercel/issues"
+  },
+  "keywords": [
+    "vercel",
+    "contact-form",
+    "typescript",
+    "contact-api",
+    "serverless"
+  ],
   "type": "module",
   "scripts": {
     "typecheck": "tsc --noEmit",
@@ -30,5 +38,16 @@
     "@vitest/coverage-v8": "^4.1.9",
     "typescript": "^5.9.3",
     "vitest": "^4.1.9"
+  },
+  "overrides": {
+    "minimatch": "10.2.5",
+    "smol-toml": "1.6.1",
+    "ajv": "8.18.0",
+    "path-to-regexp": "6.3.0",
+    "undici": "6.24.0",
+    "js-yaml": "4.2.0",
+    "@vercel/node": {
+      "undici": "6.24.0"
+    }
   }
 }
