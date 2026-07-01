@@ -49,7 +49,7 @@ await fetch("https://your-deployment.vercel.app/api/contact", {
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/masonlet/contact-api.git
+git clone https://github.com/contact-api/vercel.git
 cd contact-api
 npm install
 ```
@@ -66,7 +66,17 @@ Copy `.env.example` to `.env` and fill Environment Variables. Shared values are 
 | `RESEND_API_KEY`  | Resend API key, required when `EMAIL_PROVIDER=resend`. |
 | `SMTP_CONFIG`     | JSON string of Nodemailer SMTP config, required when `EMAIL_PROVIDER=nodemailer`. |
 
-### Local Development
+
+### 3. Deploying
+
+#### Deploy with Resend
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/contact-api/vercel&env=FROM_EMAIL,TO_EMAIL,ALLOWED_ORIGINS,EMAIL_PROVIDER,RESEND_API_KEY&envDescription[FROM_EMAIL]=Sender%20address%20(must%20be%20a%20verified%20Resend%20domain)&envDescription[TO_EMAIL]=Delivery%20address&envDescription[ALLOWED_ORIGINS]=Comma-separated%20list%20of%20allowed%20CORS%20origins&envDescription[EMAIL_PROVIDER]=resend&envDescription[RESEND_API_KEY]=Your%20Resend%20API%20key)
+
+#### Deploy with Nodemailer
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/contact-api/vercel&env=FROM_EMAIL,TO_EMAIL,ALLOWED_ORIGINS,EMAIL_PROVIDER,SMTP_CONFIG&envDescription[FROM_EMAIL]=Sender%20address%20accepted%20by%20your%20SMTP%20provider&envDescription[TO_EMAIL]=Delivery%20address&envDescription[ALLOWED_ORIGINS]=Comma-separated%20list%20of%20allowed%20CORS%20origins&envDescription[EMAIL_PROVIDER]=nodemailer&envDescription[SMTP_CONFIG]=JSON%20string%20of%20SMTP%20settings)
+
+
+#### Local Development
 ```bash
 npm run typecheck     # TypeScript type check
 npm run test          # Run Vitest tests
