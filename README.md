@@ -1,6 +1,8 @@
 # Contact API Vercel
-
 Deployable **multi-provider** contact form API.
+
+[![CI](https://github.com/contact-api/vercel/actions/workflows/ci.yml/badge.svg)](https://github.com/contact-api/vercel/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
 ## Features
 - Single `POST /api/contact` endpoint - drop into any project.
